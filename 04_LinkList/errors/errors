@@ -1,0 +1,24 @@
+	public void reverseUsingRecursion(){
+		Node head = this.head;
+		Node current = head;
+		
+		reverseUsingRecursion(head,current);
+	}
+	
+	public void reverseUsingRecursion(Node head, Node current){
+				
+		Node nextNode = current.getNext();
+		if(nextNode == null){
+			this.head = current;
+			//return this.head;
+			return;
+		}
+		
+		nextNode.setNext(current);
+		
+	    reverseUsingRecursion(head,nextNode);
+	    
+		if(current == head){
+			current.setNext(null);
+		}
+	}// Exception in thread "main" java.lang.StackOverflowError

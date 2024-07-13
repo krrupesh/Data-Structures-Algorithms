@@ -1,0 +1,3 @@
+Lec 20 (The this reference in lambdas)
+---------------------------------------
+-> lambdas doesn't override the this reference. this reference behaves same as it behaves outside.
